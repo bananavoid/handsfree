@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
 		txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
 		btnSpeak = (ImageButton) findViewById(R.id.btnSpeak);
 
+		// hide the action bar
 		getActionBar().hide();
 
 		btnSpeak.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,9 @@ public class MainActivity extends Activity {
 
 	}
 
+	/**
+	 * Showing google speech input dialog
+	 * */
 	private void promptSpeechInput() {
 		Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
 		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
